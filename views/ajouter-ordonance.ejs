@@ -1,0 +1,78 @@
+<!-- include header -->
+<%- include('include/_header') %>
+  <!-- /include header -->
+  <div class="fiche" id="ajouter-ordonance">
+    <div class="m">
+
+      <a href="/index-dossier" style="text-decoration-line: none;">
+        <font style="font-size:20px">
+          <i class="fas fa-angle-left prev"></i>Voir tous les dossiers
+        </font>
+      </a>
+    </div>
+    <form class="form" action="/ordonnance" method="post" id="util" onsubmit="return validerFormordonnance()">
+
+      <h2> Ajouter Ordonnance</h2>
+      <div class="content">
+        <div class="input-box">
+          <label for="nom">Nom </label>
+          <input type="text" id="nom" name="nom" value="<%= doss.nom %>">
+        </div>
+        <div class="input-box">
+          <label for="prenom" style="margin-left:10% ">Prénom </label>
+          <input type="prenom" id="prenom" name="prenom" value="<%= doss.prenom%>">
+        </div>
+        <div class="input-box">
+          <label for="age">age</label>
+          <input type="text" id="age" name="age">
+        </div>
+        <div class="input-box">
+          <label for="date_naissance" style="margin-left:10%">Date</label>
+          <input type="text" id="date_naissance" name="date" placeholder="jj/mm/aaaa">
+        </div>
+
+        <div class="input-box">
+          <label for="Adresse">Adresse</label>
+          <input type="text" id="Adresse" name="adresse" value="Cité des palmiers, Aokas, Béjaïa">
+        </div>
+        <div class="input-box">
+          <label for="tel" style="margin-left:10%">Numéro de téléphone</label>
+          <input type="tel" id="tel" name="num_tel" value="0776 48 20 25">
+        </div>
+        <div class="input-box">
+          <label for="mail">E-mail</label>
+          <input type="email" id="mail" name="mail" value="LyesZizi@gmail.com">
+        </div>
+        <div class="input-box">
+          <label for="nmr" style="margin-left:10%">Numéro d'ordre</label>
+          <input type="text" id="nmr" name="num_ordre" value="009998764526">
+        </div>
+        <div class="input-box">
+          <label for="médicament">Médicaments </label>
+          <textarea id="médicament" rows="7" name="medicaments" cols="55" style="border:1px solid #ccc; ">
+
+                  </textarea>
+
+        </div>
+        <div class="input-box">
+          <label for="notes" style="margin-left:10%">Quantite et prise</label>
+          <textarea id="notes" rows="7" cols="55" name="note" style="border:1px solid #ccc; ">
+
+                </textarea>
+
+        </div>
+        <br>
+        <button type="submit" class="bloc8" style="height: 45px;">
+          <font color="white" size="4"> Sauvegarder </font>
+        </button>
+
+        <br>
+        <br>
+      </div>
+    </form>
+  </div>
+  </div>
+
+  <!-- include footer -->
+  <%- include('include/_footer') %>
+    <!-- /include footer -->

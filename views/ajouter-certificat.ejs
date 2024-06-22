@@ -1,0 +1,51 @@
+<!-- include header -->
+<%- include('include/_header') %>
+  <!-- /include header -->
+  <div class="fiche" id="ajouter-certificat">
+    <div class="m">
+
+      <a href="/index-dossier" style="text-decoration-line: none;">
+        <font style="font-size:20px">
+          <i class="fas fa-angle-left prev"></i>Voir tous les dossiers
+        </font>
+      </a>
+    </div>
+    <form class="formulaire" action="/certificat" method="post" id="util" onsubmit="return validerFormucertificat()">
+
+      <h2 style=" margin-left:8%;"> Ajouter Certificat</h2>
+
+      <div class="content">
+        <div class="input-box">
+          <label for="nom">Nom </label>
+          <br>
+          <input type="text" id="nom" value="<%= doss.nom%>" name="nom">
+        </div>
+        <div class="input-box">
+
+          <label for="prenom">Prénom </label>
+          <br>
+          <input type="prenom" id="prenom" value="<%= doss.prenom%>" name="prenom">
+        </div>
+
+        <div class="input-box">
+          <label for="date">Date</label>
+          <br>
+          <input type="text" id="date" name="date" placeholder="jj/mm/aaaa">
+        </div>
+        <label for="notes">Diagnostic </label>
+
+        <textarea id="notes" rows="7" cols="50" name="note" style="border:1px solid #ccc; ">
+          </textarea>
+        <br>
+        <button type="submit" class="bloc8" style="height: 45px;">
+          <font color="white" size="4"> Sauvegarder </font>
+        </button>
+        <br>
+        <br>
+      </div>
+    </form>
+  </div>
+  </div>
+  <!-- include footer -->
+  <%- include('include/_footer') %>
+    <!-- /include footer -->

@@ -1,0 +1,55 @@
+<!-- include header -->
+<%- include('include/_header') %>
+    <!-- /include header -->
+
+
+    <!-- Main Site -->
+    <!-- Le contenu de la div qui a pour id fiche et qui sera affichée lorsque on clique 
+    sur fiches patients dans nav (display:none  c'est pour caché la div)-->
+    <div class="fiche" id="fiche">
+        <div class="b">
+            <font color="0000" size="5">
+                <i class="fa-regular fa-file-lines fa-xl"></i>
+                <b>&nbsp;&nbsp;Fiches patients</b>
+            </font>
+
+            <!-- bouton lien vers le formulaire d'ajouter patient qui est dans la page ficheform.html-->
+            <a href="/ajouter-fiche"><button class="ajouter ">Ajouter patient</button></a>
+            <br>
+            <br>
+            <br>
+        </div>
+        <form method="POST" action="/rechercher-fiche">
+            <div class="rechercher">
+                <input name="recherche" type="text" placeholder="&nbsp;&nbsp;Rechercher un patient">
+                &nbsp;&nbsp;<i class="fa-solid fa-magnifying-glass fa-lg" style="color:#0BA4AB"></i>
+            </div>
+        </form>
+        <!-- form handling -->
+        <form action="/" method="POST">
+            <table class="tableau">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>ID</th>
+                        <th>Nom</th>
+                        <th>Prenom</th>
+                        <th>Sexe</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <%- include('include/_show') %>
+                </tbody>
+            </table>
+        </form>
+    </div>
+    <!-- /fin de la div id=fiche -->
+    </div>
+
+
+    <!-- /Main Site -->
+
+
+    <!-- include footer -->
+    <%- include('include/_footer') %>
+        <!-- /include footer -->

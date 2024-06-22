@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/user.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <!-- Le header -->
+    <header>
+        <div class="container">
+            <a class="logo">
+                <img src="img/dentismile.png">
+            </a>
+        </div>
+        <font color="0000" size="3">
+
+            <button class="blocD" style="height: 35px;" onclick="confirmLogout()">
+                <font color="white" size="3"> Déconnexion </font>
+            </button>
+            <script>
+                function confirmLogout() {
+                    if (confirm("Êtes-vous sûr de vouloir vous déconnecter ?")) {
+                        window.location.href = "/accueil";
+                    }
+                } 
+            </script>
+        </font>
+    </header>
+    <!-- la div qui englobe les contenu de la page apart le header càd la nav (menu ) et les div qui seront 
+  affichées à droite lorsque on clique sur un élemenet de nav  -->
+    <div class="page">
+
+        <div class="nav"> <!-- La nav est une div qui contient liste d'élements qui -->
+            <ul>
+                <li class="user"><a href="/user">
+                        <br>
+                        <i class="fa-sharp fa-solid fa-circle-user fa-xs" style="color:#1A17A5"></i>
+                    </a>
+                    <span>
+                        <font color="1A17A5">
+                            <h3>
+                                <%= compte.nom %>
+                                    <%= compte.prenom %><br>
+                        </font>
+                        <font color="0BA4AB ">&nbsp;<%= compte.role %>
+                                </h3>
+                        </font>
+                    </span>
+                </li>
+                <br>
+                <br>
+
+                <font color="0BA4AB" size="6">Gestion</font>
+                <br>
+                <br>
+                <% if(compte.role==='Dentiste' || compte.role==='Assistant' ) { %>
+                    <li> <a href="/index-fiche" style="text-decoration-line: none;">
+
+                            <span class="title">
+                                <font color="0000" size="5">
+                                    <i class="fa-solid fa-user-group fa-lg" style="font-size:25px;"></i>
+                                    &nbsp;&nbsp;Fiches patients
+                                </font>
+                            </span>
+                        </a>
+                    </li>
+                    <% } %>
+                        <br>
+                        <li class="rdv">
+                            <font color="00000 " size="5" class="m1" onclick="toggleDropdown()">
+                                <i class="fa-regular fa-calendar fa-xl iv" style="font-size:30px;"></i>
+                                &nbsp;&nbsp;Rendez-vous <i class="fa-solid fa-caret-down fa-xl "
+                                    onclick="toggleDropdown()" id="fich" style="font-size:30px;"></i>
+                            </font>
+                            <br>
+                            <br>
+                            <ul id="rdv2" style="display: none;">
+                                <li> <a href="/index-rdv" style="text-decoration-line: none;">
+
+                                        <font color="000" size="4"> <i class="fa-solid fa-calendar-plus fa-xl "
+                                                style="font-size:30px;"></i>&nbsp;&nbsp;Ajouter un RDV</font>
+                                    </a>
+                                </li>
+                            </ul>
+
+                        </li>
+                        <% if(compte.role==='Dentiste' ) { %>
+                            <li><a href="/index-dossier " style="text-decoration-line: none;">
+                                    <span class="title">
+                                        <font color="0000" size="5">
+                                            <i class="fa-solid fa-clipboard fa-xl" style="font-size:30px;""></i>
+                         &nbsp;&nbsp;Dossier médical</font>
+                        </span>
+                            </a>
+                    </li>
+                    <% } %>
+                         <br>
+            </ul>
+            <% if(compte.role==='Dentiste' ) { %>
+            <hr>
+            <ul>
+                <font color=" 0BA4AB" size="5" style="margin-left:-10%">Administration
+                                        </font>
+                                        <br>
+                                        <br>
+                            <li id="rdv">
+                                <a href="/Gestioncompte" style="text-decoration-line: none;">
+                                    <span class="title">
+                                        <font color="0000" size="5">
+                                            <i class="fa-solid fa-user fa-xl" style="font-size:25px;"></i>
+                                            &nbsp;&nbsp;Gestion des comptes
+                                        </font>
+                                    </span>
+                                </a>
+                            </li>
+                            <br>
+
+            </ul>
+            <% } %>
+        </div>
+
+        <!-- /fin header apparement-->

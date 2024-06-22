@@ -1,0 +1,61 @@
+<!-- include header -->
+<%- include('include/_header') %>
+  <!-- /include header -->
+  <div class="fiche" id="utilisateur">
+
+    <div class="b">
+      <font color="0000" size="5">
+        <i class="fa-solid fa-user fa-xl"></i>
+        <b>&nbsp;&nbsp;Comptes </b>
+      </font>
+      <a href="/ajouter-ass"><button class="ajouter ">Ajouter utilistateur</button> </a>
+      <br>
+      <br>
+      <br>
+
+    </div>
+    <br>
+    <br>
+
+    <div class="utili" style="margin-top:-3%">
+      <table id="table">
+        <thead>
+          <tr>
+            <th>Nom</th>
+            <th>Prénom</th>
+            <th>Role</th>
+            <th>Email</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% for(var i=0;i<utilisateur.length;i++){ if(utilisateur[i].role==="Assistant" ) { %>
+            <tr>
+              <td>
+                <%= utilisateur[i].lastName%>
+              </td>
+              <td>
+                <%= utilisateur[i].firstName%>
+              </td>
+              <td>
+                <%= utilisateur[i].role%>
+              </td>
+              <td>
+                <%= utilisateur[i].email%>
+              </td>
+              <td>
+                <a class="btn border-shadow delete3" style="color:red" data-id=<%=utilisateur[i]._id%>>
+                  <span class="text-gradient"><i class="fa-solid fa-trash"></i></span>
+                </a>
+              </td>
+            </tr>
+            <% } } %>
+
+        </tbody>
+      </table>
+    </div>
+  </div>
+  </div>
+  <!-- include footer -->
+  <%- include('include/_footer') %>
+    <!-- /include footer -->

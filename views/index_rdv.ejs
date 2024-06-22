@@ -1,0 +1,123 @@
+<!-- include header -->
+<%- include('include/_header') %>
+    <!-- /include header -->
+
+    <div class="fiche" id="rdv">
+        <div class="b">
+            <font color="0000" size="5">
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <i class="fa-regular fa-calendar fa-xl" style="margin-left: 3%;margin-top:3%"></i>
+                <b>&nbsp;&nbsp;Liste des rendez-vous</b>
+            </font>
+            <br>
+            <br>
+            <br>
+        </div>
+        <!-- agenda -->
+        <div class="containerr">
+            <div class="left">
+                <div class="calendar">
+                    <div class="month">
+                        <i class="fas fa-angle-left prev"></i>
+                        <div class="date">Avril 2023</div>
+                        <i class="fas fa-angle-right next"></i>
+                    </div>
+                    <div class="weekdays">
+                        <div>Dim</div>
+                        <div>Lun</div>
+                        <div>Mar</div>
+                        <div>Mer</div>
+                        <div>Jeu</div>
+                        <div>Ven</div>
+                        <div>Sam</div>
+                    </div>
+                    <div class="days"></div>
+                    <div class="goto-today">
+                        <div class="goto">
+                            <input type="text" placeholder="mm/yyyy" class="date-input" />
+                            <button class="goto-btn">Aller</button>
+                        </div>
+                        <button class="today-btn"> Aujourd-hui</button>
+                    </div>
+                </div>
+            </div>
+            <div class="right" data-userRole="<%= compte.role %>">
+                <div class="today-date">
+                    <div class="event-day">Sam</div>
+                    <div class="event-date">1 Avril 2023</div>
+                </div>
+                <div class="events">
+                </div>
+                <div class="add-event-wrapper">
+                    <div class="add-event-header">
+                        <div class="title">Ajouter RDV</div>
+                        <i class="fas fa-times close"></i>
+                    </div>
+                    <div class="add-event-body">
+
+                        <div class="add-event-input">
+                            <input type="text" class="event-name" placeholder="Nom"
+                                style="color:#a5a5a5;margin-left: 3%;" />
+                        </div>
+                        <div class="add-event-input">
+
+                            <input type="text" class="event-prename" placeholder="prénom"
+                                style="color:#a5a5a5;margin-left: 3%;" />
+                        </div>
+                        <div class="add-event-input">
+
+                            <label for="motif" style="color:#a5a5a5 ;margin-left: 7%;">Motif de consultation </label>
+
+                            <select id="motif" name="motif" class="event-cons">
+
+                                <option value="Chirurgie buccale">Chirurgie buccale</option>
+                                <option value="Blanchiment dentaire">Blanchiment dentaire</option>
+                                <option value="Dentisterie esthétique">Dentisterie esthétique</option>
+                                <option value="Endondontie">Endondontie</option>
+                                <option value="Endondontie">Paradontologie</option>
+
+                            </select>
+                        </div>
+                        <div class="add-event-input">
+                            <label for="heure" style="color: #a5a5a5 ;margin-left: 7%;">Heure de RDV</label>
+                            <br>
+                            <select id="heure" name="heure" placeholder="heure de rdv" class="event-time-to">
+                                <option value="08:00  08:30">De 08h00 à 08h30</option>
+                                <option value="08:30 09:00"> De 08h30 à 09h00</option>
+                                <option value="09:00 09:30">De 09h00 à 09h30</option>
+                                <option value="09:30 10:00">De 09h30 à 09h50</option>
+                                <option value="10:00 10:30">De 10H00 à 10h30</option>
+                                <option value="10:30 11:00">De 10h40 à 11h10</option>
+                                <option value="11:00 11:30">De 11h20 à 12h10</option>
+                                <option value="11:30 12:00">De 13h00 à 13h30</option>
+                                <option value="13:00 13:30">De 13h40 à 14h10</option>
+                                <option value="13:30 14:00">De 14h20 à 14h50</option>
+                                <option value="14:00 14:30">De 15h00 à 15:30</option>
+                                <option value="14:30 15:00">De 15h40 à 16h10</option>
+                                <option value="15:30 16:00">De 16h20 à 17h10</option>
+                                <option value="16:00 16:30">De 17h20 à 17h50</option>
+                                <option value="16:30 17:00">De 17h20 à 17h50</option>
+                                <option value="17:00 17:30">De 17h20 à 17h50</option>
+                                <option value="17:30 18:00">De 17h20 à 17h50</option>
+
+
+                            </select>
+                        </div>
+                    </div>
+                    <div class="add-event-footer">
+                        <button class="add-event-btn">Ajouter RDV</button>
+                    </div>
+                </div>
+            </div>
+            <button class="add-event">
+                <i class="fas fa-plus"></i>
+            </button>
+        </div>
+    </div> <!-- fin de la div id=rdv -->
+    </div>
+
+
+    <!-- include footer -->
+    <%- include('include/_footer') %>
+        <!-- /include footer -->

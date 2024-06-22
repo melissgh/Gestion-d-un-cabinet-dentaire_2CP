@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description"
+        content="Un excellent dentiste à Bejaia offre aux enfants et adultes des soins de qualité un cabinet dentaire moderne et conviviale "
+        WHEN I MAKE MY CLIENTS SMILE THAT'S REAL SUCCES"" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/insc.css">
+    <script src="js/form.js" defer></script>
+</head>
+
+<body>
+    <div class="container" id="container-right">
+        <div class="form-container sign-up-container">
+            <form class="inscription-form" method="POST" action="/signUp" onsubmit="validerform()">
+                <h1 class="a">Créer un compte</h1>
+
+                <div class="social-container">
+                    <span class="c">Utiliser votre compte Gmail </span>
+
+
+                </div>
+                <br>
+                <input type="text" id="nom" placeholder="Nom" name="lastName">
+                <input type="text" id="Prenom" placeholder="Prenom" name="firstName">
+                <input type="text" id="Date de naissance" placeholder="Date de naissance" name="dateOfBirth">
+                <input type="text" id="Lieu de naissance" placeholder="Lieu de naissance" name="placeOfBirth">
+                <label for="sexe"></label>
+                <br>
+                <select id="sexe" name="gender" class="inp">
+
+                    <option value="Féminin">Féminin</option>
+                    <option value="Masculin">Masculin</option>
+                </select>
+                <input type="text" id="numero" placeholder="Téléphone" name="phone">
+                <input type="email" id="email" placeholder="Email" name="email">
+
+                <input type="password" id="psw" placeholder="Mot de passe" name="password">
+                <input type="password" id="psw2" placeholder="Confirmer votre mot de passe" name="confirmPassword">
+
+                <input type="submit" value="S'inscrire" class="b">
+            </form>
+        </div>
+
+        <div class="overlay-container" id="container-left">
+            <div class="overlay">
+                <div class="overlay-left">
+                    <h1 class="e">Heureux de vous revoir!</h1>
+                    <br>
+                    <span class="f">Si vous disposez d'un compte
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Connectez-vous
+                        ici.</span>
+                    <br>
+                    <a href="/connexion"> <input type="submit" value="Se connecter" class="n"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

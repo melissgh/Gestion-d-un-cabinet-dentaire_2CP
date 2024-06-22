@@ -1,0 +1,55 @@
+<!-- include header -->
+<%- include('include/_header') %>
+    <!-- /include header -->
+
+
+    <!-- Main Site -->
+    <!-- Le contenu de la div qui a pour id fiche et qui sera affichée lorsque on clique 
+    sur fiches patients dans nav (display:none  c'est pour caché la div)-->
+    <div class="fiche" id="fiche">
+        <div class="b">
+            <font color="0000" size="5">
+                <br>
+
+                <i class="fa-regular fa-calendar fa-xl" style="margin-left: 5%;"></i>
+                <b>&nbsp;&nbsp;Liste des RDV</b>
+            </font>
+
+            <br>
+            <br>
+            <br>
+        </div>
+
+        <div class="rechercher">
+            <input type="box" placeholder="&nbsp;&nbsp;Rechercher un patient">
+            &nbsp;&nbsp;<i class="fa-solid fa-magnifying-glass fa-lg" style="color:#0BA4AB"></i>
+        </div>
+        <!-- form handling -->
+        <form action="/" method="POST">
+            <table class="tableau">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>ID</th>
+                        <th>Nom</th>
+                        <th>Prenom</th>
+                        <th>Motif de consultation</th>
+                        <th> RDV</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </form>
+    </div>
+    <!-- /fin de la div id=fiche -->
+    </div>
+
+
+    <!-- /Main Site -->
+
+
+    <!-- include footer -->
+    <%- include('include/_footer') %>
+        <!-- /include footer -->

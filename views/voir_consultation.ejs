@@ -1,0 +1,50 @@
+<!-- include header -->
+<%- include('include/_header') %>
+    <!-- /include header -->
+    <div class="fiche" id="ajouter-consultation">
+        <form class="form" action="" method="post" id="cons">
+            <div class="m">
+                </i>
+                <a href="/index-dossier" style="text-decoration-line: none;">
+                    <font style="font-size:20px"><i class="fas fa-angle-left prev"></i>
+                        Voir tous les dossiers</font>
+                </a>
+            </div>
+            <h2> Consultation de <%= doss.nom %>
+                    <%= doss.prenom%>
+            </h2>
+
+            <div class="content">
+                <div class="input-box">
+                    <label for="nom">Nom </label>
+                    <input type="text" id="nom" name="nom" value="<%= doss.nom %>">
+                </div>
+                <div class="input-box">
+                    <label for="prenom" style="margin-left:10% ">Prénom </label>
+                    <input type="prenom" id="prenom" name="prenom" value="<%= doss.prenom%>">
+                </div>
+                <div class="input-box">
+                    <label for="date">Date </label>
+                    <input type="text" id="date" value="<%= doss.date%>" name="date" placeholder="jj/mm/aaaa">
+                </div>
+                <div class="input-box">
+                    <label for="sexe" style="margin-left:10%">Motif de consultation</label>
+                    <br>
+                    <input type="text" id="motif" name="motif" value="<%= doss.motif%>">
+                </div>
+                <label for="notes">Notes </label>
+                <br>
+                <textarea id="notes" rows="10" name="note" cols="127.2" style="border:1px solid #ccc; "><%= doss.note%>
+                 </textarea>
+
+
+                <br>
+                <br>
+                <br>
+            </div>
+        </form>
+    </div>
+    </div>
+    <!-- include footer -->
+    <%- include('include/_footer') %>
+        <!-- /include footer -->

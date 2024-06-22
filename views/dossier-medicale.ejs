@@ -1,0 +1,80 @@
+<!-- include header -->
+<%- include('include/_header') %>
+  <!-- /include header -->
+  </div>
+  <div class="fiche" id="utilisateur">
+
+    <div class="b">
+      <font color="0000" size="5">
+        <br>
+        <i class="fa-solid fa-user fa-xl" style="margin-left: 3%;margin-top:3%"></i>
+        <b>&nbsp;&nbsp;Dossiers médicaux </b>
+      </font>
+
+
+    </div>
+    <br>
+    <br>
+
+    <div class="utili" style="margin-top:-3%">
+      <table id="table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nom</th>
+            <th>Prénom</th>
+            <th>Consultation</th>
+            <th>Certificat</th>
+            <th>Ordonnance</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              1
+            </td>
+            <td>
+              mebarakou
+            </td>
+            <td>
+              amina
+            </td>
+            <td>
+              <a href="/consultation" class="btn border-shadow update">
+                <span class="text-gradient"><i class="fa-regular fa-file fa-lg"></i></span>
+              </a>
+              <a href="ajouter-consultation" class="btn border-shadow delete" data-id="">
+                <span class="text-gradient"><i class="fa-solid fa-plus"></i></span>
+              </a>
+
+            </td>
+            <td>
+              <a href="/certificat" class="btn border-shadow update">
+                <span class="text-gradient"><i class="fa-regular fa-file fa-lg"></i></span>
+              </a>
+
+              <a href="/ajouter-certificat" class="btn border-shadow delete" data-id="">
+                <span class="text-gradient"><i class="fa-solid fa-plus"></i></span>
+              </a>
+
+            </td>
+            <td>
+              <a href="/ordonances" class="btn border-shadow update">
+                <span class="text-gradient"><i class="fa-regular fa-file fa-lg"></i></span>
+              </a>
+              &nbsp;
+              <a href="/ajouter-ordonance" class="btn border-shadow delete" data-id="">
+                <span class="text-gradient"><i class="fa-solid fa-plus"></i></span>
+              </a>
+            </td>
+
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+  </div>
+  </div>
+  <!-- include footer -->
+  <%- include('include/_footer') %>
+    <!-- /include footer -->

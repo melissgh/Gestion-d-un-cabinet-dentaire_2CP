@@ -1,0 +1,74 @@
+<!-- include header -->
+<%- include('include/_header') %>
+    <!-- /include header -->
+
+    <!-- ajouter fiche form -->
+    <div class="fiche">
+        <!-- Pour mettre l'icone < voir toutes les fiches-->
+        <div class="m">
+            </i>
+            <a href="/index-fiche" style="text-decoration-line: none;">
+                <font style="font-size:20px"><i class="fas fa-angle-left prev"></i>Voir Toutes Les Fiches</font>
+            </a>
+        </div>
+        <form class="form" method="POST" id="modifier_fiche">
+            <form class="form" id="formpatient" onsubmit="return validerFormulaire()">
+                <form class="form" method="POST" id="modifier_fiche">
+                    <h2> Consulter/Modifier la fiche</h2>
+                    <div class="content">
+                        <div class="input-box">
+                            <label for="nom">Nom</label>
+                            <input type="hidden" name="id" value="<%= fiche._id %>">
+                            <input type="text" id="nom" name="nom" value="<%= fiche.nom %>">
+                        </div>
+                        <div class="input-box">
+                            <label for="prenom" style="margin-left:10% ">Prénom</label>
+                            <input type="prenom" id="prenom" name="prenom" value="<%= fiche.prenom %>">
+                        </div>
+                        <div class="input-box">
+                            <label for="date_naissance">Date de naissance</label>
+                            <input type="text" id="date_naissance" name="date_naissance" placeholder="jj/mm/aaaa"
+                                value="<%= fiche.date_naissance %>">
+                        </div>
+                        <div class="input-box">
+                            <label for="lieu_naissance" style="margin-left:10% ">lieu_naissance</label>
+                            <input type="text" id="lieu_naissance" name="lieu_naissance"
+                                value="<%= fiche.lieu_naissance %>">
+                        </div>
+                        <div class="input-box">
+                            <label for="sexe">Sexe</label>
+                            <br>
+                            <select id="sexe" name="sexe">
+                                <option value="<%= fiche.sexe %>">
+                                    <%= fiche.sexe %>
+                                </option>
+                                <option value="Féminin">Féminin</option>
+                                <option value="Masculin">Masculin</option>
+                            </select>
+                        </div>
+
+                        <div class="input-box">
+                            <label for="email" style="margin-left:10% ">E-mail</label>
+                            <input type="email" id="email" name="email" value="<%= fiche.email%>">
+                        </div>
+                        <div class="input-box">
+                            <label for="telephone">Numéro de téléphone</label>
+                            <input type="tel" id="telephone" name="telephone" value="<%= fiche.telephone %>">
+                        </div>
+                        <div class="input-box">
+                            <label for="profession" style="margin-left:10% ">Profession</label>
+                            <input type="text" id="profession" name="profession" class="adr"
+                                value="<%= fiche.profession %>">
+                        </div>
+                        <br>
+                        <br>
+                        <button type="submit" class="bloc8" style="height: 45px; margin-top: 70px;">
+                            <font color="white" size="4"> Sauvegarder </font>
+                        </button>
+                    </div>
+                </form>
+            </form>
+    </div>
+    <!-- include footer -->
+    <%- include('include/_footer') %>
+        <!-- /include footer -->

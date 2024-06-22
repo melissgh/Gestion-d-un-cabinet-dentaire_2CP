@@ -1,0 +1,49 @@
+<!-- include header -->
+<%- include('include/_header') %>
+    <!-- /include header -->
+    <div class="fiche" id="mdps">
+        <div class="prec"> <a href="/user">
+                <span>
+                    <font color="#0BA4AB" size="5">
+                        <br>
+                        &nbsp; &nbsp; <i class="fa-solid fa-chevron-left"></i>
+                        &nbsp;<b>Informations personnelles</b>
+                    </font>
+                </span></a>
+        </div>
+
+        <div class="pass">
+            <span>
+                <font color="000" size="5">
+                    <br>
+
+                    &nbsp; &nbsp; <i class="fa-solid fa-key"></i>
+                    &nbsp;<b>Mot de passe </b>
+                </font>
+            </span>
+            </li>
+
+        </div>
+        <form id="changePasswordForm" class="formpsw" action="/users/<%= compte.id %>/password" method="POST">
+            <label for="old_password">Ancien mot de passe :</label>
+            <input type="password" id="old_password" name="currentPassword">
+
+            <label for="new_password">Nouveau mot de passe :</label>
+            <input type="password" id="new_password" name="newPassword">
+
+            <label for="confirm_password">Confirmez le nouveau mot de passe :</label>
+            <input type="password" id="confirm_password" name="confirm_password">
+            <br>
+            <br>
+            <input type="submit" value="Changer le mot de passe" class="md" onclick="pswconfirmation()">
+            <p id="error" class="error"></p>
+        </form>
+
+
+
+    </div>
+    </div>
+
+    <!-- include footer -->
+    <%- include('include/_footer') %>
+        <!-- /include footer -->

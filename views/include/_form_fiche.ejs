@@ -1,0 +1,49 @@
+<!-- form_fiche handling -->
+<form class="form" action=/api/fiches_medicales method="POST" id="ajouter_fiche">
+
+    <h2> Ajouter Patient</h2>
+    <hr>
+    <div class="content">
+        <div class="input-box">
+            <label for="name">Nom</label>
+            <input type="text" id="nom" name="nom">
+        </div>
+        <div class="input-box">
+            <label for="prenom" style="margin-left:10% ">Prénom</label>
+            <input type="prenom" id="prenom" name="prenom">
+        </div>
+        <div class="input-box">
+            <label for="date_naissance">Date de naissance</label>
+            <input type="text" id="date_naissance" name="date_naissance" placeholder="jj/mm/aaaa">
+        </div>
+        <div class="input-box">
+            <label for="lieu_naissance" style="margin-left:10% ">lieu_naissance</label>
+            <input type="text" id="lieu_naissance" name="lieu_naissance">
+        </div>
+        <div class="input-box">
+            <label for="sexe">Sexe</label>
+            <br>
+            <select id="sexe" name="sexe">
+                <option value="Féminin">Féminin</option>
+                <option value="Masculin">Masculin</option>
+            </select>
+        </div>
+        <div class="input-box">
+            <label for="email" style="margin-left:10% ">E-mail</label>
+            <input type="email" id="email" name="email">
+        </div>
+        <div class="input-box">
+            <label for="telephone">Numéro de téléphone</label>
+            <input type="tel" id="telephone" name="telephone">
+        </div>
+        <div class="input-box">
+            <label for="profession" style="margin-left:10% ">Profession</label>
+            <input type="text" id="profession" name="profession" class="adr">
+        </div>
+        <br>
+        <br>
+        <button class="bloc8" style="height: 45px;">
+            <font color="white" size="4"> Sauvegarder </font>
+        </button>
+    </div>
+</form>

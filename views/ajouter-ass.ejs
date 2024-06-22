@@ -1,0 +1,118 @@
+<!-- include header -->
+<%- include('include/_header') %>
+  <!-- /include header -->
+
+  <div class="fiche" id="ajouter_utilisateur">
+    <form class="form" action="/api/gestion_compte" method="post" id="util" onsubmit="return validateForm()">
+      <div class="m">
+        </i>
+        <a href="/Gestioncompte" style="text-decoration-line: none;">
+          <font style="font-size:20px"><i class="fas fa-angle-left prev"></i>
+            Voir toutes les utilisateurs</font>
+        </a>
+      </div>
+      <h2> Ajouter Utilisateur</h2>
+      <div class="content">
+        <div class="input-box">
+          <label for="nom">Nom de l'utilisateur</label>
+          <input type="text" id="nom" name="lastName">
+        </div>
+        <div class="input-box">
+          <label for="prenom" style="margin-left:10% ">Prénom de l'utilisateur</label>
+          <input type="prenom" id="prenom" name="firstName">
+        </div>
+        <div class="input-box">
+          <label for="date_naissance">Date de naissance</label>
+          <input type="text" id="date_naissance" name="dateOfBirth" placeholder="jj/mm/aaaa">
+        </div>
+        <div class="input-box">
+          <label for="date_naissance" style="margin-left:10%">Lieu de naissance</label>
+          <input type="text" id="date_naissance" name="placeOfBirth" placeholder="">
+        </div>
+
+        <div class="input-box">
+          <label for="sexe">Sexe</label>
+          <br>
+          <select id="sexe" name="gender">
+            <option value="Féminin">Femme</option>
+            <option value="Masculin">Homme</option>
+          </select>
+        </div>
+        <div class="input-box">
+          <label for="tel" style="margin-left:10%">Numéro de téléphone</label>
+          <input type="tel" id="tel" name="phone">
+        </div>
+        <div class="input-box">
+          <label for="mail">E-mail</label>
+          <input type="email" id="mail" name="email">
+        </div>
+
+        <div class="input-box">
+          <label for="mdp" style="margin-left:10%">Mots de passe</label>
+          <input class="mdp" type="password" id="mdp" name="password">
+          <i class="fa-solid fa-eye" id="z"></i>
+        </div>
+        <div class="input-box">
+          <label for="mdp2">Confirmer le mot de passe</label>
+          <input class="mdp" type="password" id="mdp2" name="confirmPassword">
+          <i class="fa-solid fa-eye" id="r"></i>
+        </div>
+        <button type="submit" class="bloc8" style="height: 45px;">
+          <font color="white" size="4"> Sauvegarder </font>
+        </button>
+        <script>
+          // Récupération des éléments HTML
+          var mdpInput = document.getElementById("mdp");
+          var mdpiIcon = document.getElementById("mdpi");
+          // Ajout d'un événement clic à l'icône
+          mdpiIcon.addEventListener("click", function () {
+            // Si le champ de saisie est de type "password"
+            if (mdpInput.type === "password") {
+              // Changez le type de champ de saisie en "text"
+              mdpInput.type = "text";
+              // Changez l'icône pour un oeil barré
+              mdpiIcon.classList.remove("fa-eye");
+              mdpiIcon.classList.add("fa-eye-slash");
+              // Sinon, si le champ de saisie est déjà de type "text"
+            } else {
+              // Changez le type de champ de saisie en "password"
+              mdpInput.type = "password";
+              // Changez l'icône pour un oeil normal
+              mdpiIcon.classList.remove("fa-eye-slash");
+              mdpiIcon.classList.add("fa-eye");
+            }
+          });
+
+          // Récupération des éléments HTML
+          var mdpInput2 = document.getElementById("mdp2");
+          var mdpiIcon2 = document.getElementById("mdp2i");
+          // Ajout d'un événement clic à l'icône
+          mdpiIcon2.addEventListener("click", function () {
+            // Si le champ de saisie est de type "password"
+            if (mdpInput2.type === "password") {
+              // Changez le type de champ de saisie en "text"
+              mdpInput2.type = "text";
+              // Changez l'icône pour un oeil barré
+              mdpiIcon2.classList.remove("fa-eye");
+              mdpiIcon2.classList.add("fa-eye-slash");
+              // Sinon, si le champ de saisie est déjà de type "text"
+            } else {
+              // Changez le type de champ de saisie en "password"
+              mdpInput2.type = "password";
+              // Changez l'icône pour un oeil normal
+              mdpiIcon2.classList.remove("fa-eye-slash");
+              mdpiIcon2.classList.add("fa-eye");
+            }
+          });
+        </script>
+        <br>
+        <br>
+      </div>
+    </form>
+  </div>
+
+
+  </div>
+  <!-- include footer -->
+  <%- include('include/_footer') %>
+    <!-- /include footer -->

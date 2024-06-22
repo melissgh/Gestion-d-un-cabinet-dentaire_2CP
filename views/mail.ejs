@@ -1,0 +1,50 @@
+<!-- include header -->
+<%- include('include/_header') %>
+    <!-- /include header -->
+    <div class="fiche" id="mail">
+
+
+        <div class="prec"> <a href="/user">
+                <span>
+                    <font color="#0BA4AB" size="5">
+                        <br>
+                        &nbsp; &nbsp; <i class="fa-solid fa-chevron-left"></i>
+                        &nbsp;<b>Informations personnelles</b>
+                    </font>
+                </span></a>
+        </div>
+
+        <div class="mail">
+            <span>
+                <font color="000" size="5">
+                    <br>
+
+                    &nbsp; &nbsp; <i class="fa-regular fa-envelope"></i>
+                    &nbsp;<b>Email </b>
+                </font>
+            </span>
+
+
+        </div>
+
+        <form id="changeEmailForm" class="formpsw" action="/users/<%= compte.id %>/email" method="POST">
+            <label for="old_email">Ancienne adresse e-mail :</label>
+            <input type="email" id="old_email" value="<%= compte.email %>">
+
+            <label for="new_email">Nouvelle adresse e-mail :</label>
+            <input type="email" id="new_email" name="newEmail">
+            <br>
+            <br>
+            <input type="submit" value="Changer l'adresse e-mail">
+            <p id="error" class="error"></p>
+        </form>
+
+
+
+    </div>
+
+    </div>
+
+    <!-- include footer -->
+    <%- include('include/_footer') %>
+        <!-- /include footer -->

@@ -1,0 +1,26 @@
+<% for(var i=0;i<fiches.length;i++){%>
+    <tr>
+        <td>
+            <%= i+1%>
+        </td>
+        <td>
+            <%= fiches[i].nom%>
+        </td>
+        <td>
+            <%= fiches[i].prenom%>
+        </td>
+        <td>
+            <%= fiches[i].sexe%>
+        </td>
+        <td>
+            <a href="/modifier-fiche?id=<%= fiches[i]._id%>" class="btn border-shadow update">
+                <span class="text-gradient"><i class="fa-solid fa-pen-to-square" style="color: blue;"></i></span>
+            </a>
+            <a class="btn border-shadow delete" style="color:red" data-id=<%=fiches[i]._id%>>
+                <span class="text-gradient"><i class="fa-solid fa-trash"></i></span>
+            </a>
+        </td>
+
+    </tr>
+
+    <% }%>

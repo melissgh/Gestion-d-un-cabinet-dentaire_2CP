@@ -1,0 +1,57 @@
+<!-- include header -->
+<%- include('include/_header') %>
+    <!-- /include header -->
+
+
+    <!-- Main Site -->
+    <!-- Le contenu de la div qui a pour id fiche et qui sera affichée lorsque on clique 
+    sur fiches patients dans nav (display:none  c'est pour caché la div)-->
+    <div class="fiche" id="fiche">
+        <div class="b">
+            <font color="0000" size="5">
+                <i class="fa-regular fa-file-lines fa-xl" style="margin-top: 3%;"></i>
+                <b>&nbsp;&nbsp;Dossiers médicaux</b>
+            </font>
+
+
+            <a href="/index-consultation"><button class="ajouter2 ">Consultations</button></a>
+            <br>
+            <br>
+            <br>
+        </div>
+        <form method="POST" action="/rechercher-dossier">
+            <div class="rechercher">
+                <input name="recherche" type="text" placeholder="&nbsp;&nbsp;Rechercher un patient">
+                &nbsp;&nbsp;<i class="fa-solid fa-magnifying-glass fa-lg" style="color:#0BA4AB"></i>
+            </div>
+        </form>
+        <!-- form handling -->
+        <form action="/" method="POST">
+            <table class="tableau">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>ID</th>
+                        <th>Nom</th>
+                        <th>Prénom</th>
+                        <th>Consultation</th>
+                        <th>Certificat</th>
+                        <th>Ordonnance</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <%- include('include/_showdossier') %>
+                </tbody>
+            </table>
+        </form>
+    </div>
+    <!-- /fin de la div id=fiche -->
+    </div>
+
+
+    <!-- /Main Site -->
+
+
+    <!-- include footer -->
+    <%- include('include/_footer') %>
+        <!-- /include footer -->

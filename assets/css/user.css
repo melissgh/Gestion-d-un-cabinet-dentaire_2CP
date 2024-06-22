@@ -1,0 +1,40 @@
+
+.formpsw {
+    width: 60%;
+    margin: auto;
+    padding: 20px;
+   
+    
+}
+
+.formpsw label {
+    display: block;
+    margin-bottom: 5px;
+    padding: 20px;
+    font-size: larger;
+    margin-left: 90px;
+}
+
+.formpsw input[type="password"],
+.formpsw input[type="email"],input[type="submit"] {
+    display: block;
+    margin-bottom: 10px;
+    padding: 5px;
+    margin-left: 100px;
+    border: 1px solid #ccc;
+    width: 70%;
+}
+
+.formpsw input[type="submit"] {
+    background-color: #0BA4AB;
+    color: white;
+    font-size:18px;
+    font-weight: bold;
+    height: 35px;
+    width: 72%;
+}
+.fiche .pass{
+     height: 11.5%;
+      box-shadow: 0px 2px 0px 0px #d8d5d5;
+      }
+  

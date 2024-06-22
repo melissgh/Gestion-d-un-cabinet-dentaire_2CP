@@ -1,0 +1,93 @@
+<!-- include header -->
+<%- include('include/_header') %>
+    <!-- /include header -->
+
+
+    <!-- Main Site -->
+    <!-- Le contenu de la div qui a pour id fiche et qui sera affichée lorsque on clique 
+    sur fiches patients dans nav (display:none  c'est pour caché la div)-->
+    <div class="fiche" id="fiche">
+        <div class="b">
+            <font color="0000" size="5">
+                <i class="fa-regular fa-file-lines fa-xl" style="margin-top: 3%;"></i>
+                <b>&nbsp;&nbsp;Consultations Patients</b>
+            </font>
+
+            <!-- bouton lien vers le formulaire d'ajouter patient qui est dans la page ficheform.html-->
+            <br>
+            <br>
+            <br>
+        </div>
+        <div class="rechercher">
+            &nbsp;&nbsp;
+            <h3> Resultats de la recherche </h3>
+            &nbsp;&nbsp;
+        </div>
+
+
+        <!-- form handling -->
+        <% if (cons && cons.length> 0) { %>
+
+            <table class="tableau">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>ID</th>
+                        <th>Nom</th>
+                        <th>Prénom</th>
+                        <th>Date</th>
+                        <th>Motif</th>
+                        <th>Traitement</th>
+                        <th>Note</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% var i=0 %>
+                        <% cons.forEach(function (item) { %>
+                            <tr>
+                                <td>
+                                    <%= i+1%>
+                                </td>
+                                <td>
+                                    <%= item.nom %>
+                                </td>
+                                <td>
+                                    <%= item.prenom %>
+                                </td>
+                                <td>
+                                    <%= item.date %>
+                                </td>
+                                <td>
+                                    <%= item.motif %>
+                                </td>
+                                <td>
+                                    <%= item.traitement%>
+                                </td>
+                                <td>
+                                    <%= item.note %>
+                                </td>
+                                <td>
+                                    <a class="btn border-shadow delete" style="color:red" data-id=<%=item._id%>>
+                                        <span class="text-gradient"><i class="fa-solid fa-trash"></i></span>
+                                    </a>
+                                </td>
+                            </tr>
+                            <% i=i+1 %>
+                                <% }) %>
+
+                </tbody>
+            </table>
+            <% }else { %>
+                <p>Aucune fiche trouvée avec cette recherche.</p>
+                <% } %>
+    </div>
+    <!-- /fin de la div id=fiche -->
+    </div>
+
+
+    <!-- /Main Site -->
+
+
+    <!-- include footer -->
+    <%- include('include/_footer') %>
+        <!-- /include footer -->

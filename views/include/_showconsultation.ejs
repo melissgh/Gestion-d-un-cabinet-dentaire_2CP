@@ -1,0 +1,32 @@
+<% for(var i=0;i<consult.length;i++){%>
+    <tr>
+        <td>
+            <%= i+1%>
+        </td>
+        <td>
+            <%= consult[i].nom%>
+        </td>
+        <td>
+            <%= consult[i].prenom%>
+        </td>
+        <td>
+            <%= consult[i].date%>
+        </td>
+        <td>
+            <%= consult[i].motif%>
+        </td>
+        <td>
+            <%= consult[i].traitement%>
+        </td>
+        <td>
+            <%= consult[i].note%>
+        </td>
+        <td>
+            <a class="btn border-shadow delete2" style="color:red" data-id=<%=consult[i]._id%>>
+                <span class="text-gradient"><i class="fa-solid fa-trash"></i></span>
+            </a>
+        </td>
+
+    </tr>
+
+    <% }%>

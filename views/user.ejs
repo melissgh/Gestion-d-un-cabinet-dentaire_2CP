@@ -1,0 +1,64 @@
+<!-- include header -->
+<%- include('include/_header') %>
+    <!-- /include header -->
+    <div class="fiche" id="user">
+        <div class="info-perso">
+            <span>
+                <font color="#0BA4AB" size="5" class="inf">
+                    <br>
+                    <br>
+                    &nbsp; &nbsp; <i class="fa-solid fa-circle-info fa-lg "></i>
+                    &nbsp;<b>Informations personnelles:</b>
+                </font>
+            </span>
+            </li>
+
+        </div>
+
+        <div class="nom">
+            <span class="title">
+                <font color="000" size="5">
+                    &nbsp;&nbsp;<i class="fa-regular fa-user"></i>
+                    &nbsp;Nom: <%= compte.nom %>
+                </font>
+            </span>
+            </li>
+
+        </div>
+        <div class="prenom">
+
+            <span class="title">
+                <font color="000" size="5">
+                    &nbsp;&nbsp;<i class="fa-regular fa-user"></i>
+                    &nbsp;Prénom: <%= compte.prenom %>
+                </font>
+            </span>
+            </li>
+
+        </div>
+        <div class="email"><a href="/mail">
+                <span class="title">
+                    <font color="000" size="5">
+                        &nbsp;&nbsp; <i class="fa-regular fa-envelope"></i>
+                        &nbsp;Email
+                    </font>
+                </span></a>
+            <a href="/mail" class="chevron-right2"></a>
+        </div>
+        <div class="mdps"><a href="/mdp">
+                <span class="title">
+                    <font color="000" size="5">
+                        &nbsp;&nbsp;<i class="fa-solid fa-key"></i>
+                        &nbsp;Mot de passe </font>
+                </span></a>
+            <a href="/mdp" class="chevron-right"></a>
+
+
+
+        </div>
+
+
+    </div>
+    <!-- include footer -->
+    <%- include('include/_footer') %>
+        <!-- /include footer -->

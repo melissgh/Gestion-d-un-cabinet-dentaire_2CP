@@ -1,0 +1,41 @@
+<% for(var i=0;i<dossier.length;i++){%>
+    <tr>
+        <td>
+            <%= i+1%>
+        </td>
+        <td>
+            <%= dossier[i].nom%>
+        </td>
+        <td>
+            <%= dossier[i].prenom%>
+        </td>
+        <td>
+            <a href="/ajouter-consultation?id=<%= dossier[i]._id%>" style="color:green" class="btn border-shadow update"
+                data-id="">
+                <span class="text-gradient"><i class="fa-solid fa-plus"></i></span>
+            </a>
+
+        </td>
+        <td>
+            <a href="/ajouter-certificat?id=<%= dossier[i]._id%>" style="color:green" class="btn border-shadow "
+                data-id="">
+                <span class="text-gradient"><i class="fa-solid fa-plus"></i></span>
+            </a>
+
+        </td>
+        <td>
+            &nbsp;
+            <a href="/ajouter-ordonance?id=<%= dossier[i]._id%>" style="color:green" class="btn border-shadow "
+                data-id="">
+                <span class="text-gradient"><i class="fa-solid fa-plus"></i></span>
+            </a>
+        </td>
+        <td>
+            <a class="btn border-shadow delete1" style="color:red" data-id=<%=dossier[i]._id%>>
+                <span class="text-gradient"><i class="fa-solid fa-trash"></i></span>
+            </a>
+        </td>
+
+    </tr>
+
+    <% }%>
